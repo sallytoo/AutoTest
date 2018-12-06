@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="11" passed="11">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="4061" started-at="2018-12-05T07:58:41Z" finished-at="2018-12-05T07:58:45Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="4061" started-at="2018-12-05T07:58:41Z" finished-at="2018-12-05T07:58:45Z">
+      <class name="com.lemon.api.auto.testCase.AllTestCase">
+        <test-method status="PASS" signature="f(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.lemon.api.auto.testCase.AllTestCase@6d00a15d]" name="f" duration-ms="1155" started-at="2018-12-05T15:58:43Z" data-provider="datas" finished-at="2018-12-05T15:58:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[{"mobilephone":"13517315669","pwd":"123456","regname":"柠檬班"}]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[{"status":1,"code":"20110","data":null,"msg":"注册成功"}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="f(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.lemon.api.auto.testCase.AllTestCase@6d00a15d]" name="f" duration-ms="248" started-at="2018-12-05T15:58:44Z" data-provider="datas" finished-at="2018-12-05T15:58:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[{"mobilephone":"13517315669","pwd":"123456","regname":"柠檬班"}]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[{"status":0,"code":"20110","data":null,"msg":"手机号码已被注册"}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="f(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.lemon.api.auto.testCase.AllTestCase@6d00a15d]" name="f" duration-ms="251" started-at="2018-12-05T15:58:44Z" data-provider="datas" finished-at="2018-12-05T15:58:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[{"mobilephone":"13517315669","pwd":"","regname":"柠檬班"}]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[{"status":0,"code":"20103","data":null,"msg":"密码不能为空"}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="f(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.lemon.api.auto.testCase.AllTestCase@6d00a15d]" name="f" duration-ms="149" started-at="2018-12-05T15:58:44Z" data-provider="datas" finished-at="2018-12-05T15:58:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[{"mobilephone":"","pwd":"","regname":"柠檬班"}]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[{"status":0,"code":"20103","data":null,"msg":"手机号不能为空"}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="f(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.lemon.api.auto.testCase.AllTestCase@6d00a15d]" name="f" duration-ms="142" started-at="2018-12-05T15:58:44Z" data-provider="datas" finished-at="2018-12-05T15:58:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[{"mobilephone":"135","pwd":"123456","regname":"柠檬班"}]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[{"status":0,"code":"20109","data":null,"msg":"手机号码格式不正确"}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="f(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.lemon.api.auto.testCase.AllTestCase@6d00a15d]" name="f" duration-ms="151" started-at="2018-12-05T15:58:44Z" data-provider="datas" finished-at="2018-12-05T15:58:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[6]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[{"mobilephone":"13517315669","pwd":"123","regname":"柠檬班"}]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[{"status":0,"code":"20108","data":null,"msg":"密码长度必须为6~18"}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="f(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.lemon.api.auto.testCase.AllTestCase@6d00a15d]" name="f" duration-ms="138" started-at="2018-12-05T15:58:45Z" data-provider="datas" finished-at="2018-12-05T15:58:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[7]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[{"mobilephone":"13517315669","pwd":"123456"}]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[{"status":"1","code":"10001","data":null,"msg":"登录成功"}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="f(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.lemon.api.auto.testCase.AllTestCase@6d00a15d]" name="f" duration-ms="136" started-at="2018-12-05T15:58:45Z" data-provider="datas" finished-at="2018-12-05T15:58:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[8]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[{"mobilephone":"13517315669","pwd":""}]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[{"status":0,"code":"20103","data":null,"msg":"密码不能为空"}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="f(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.lemon.api.auto.testCase.AllTestCase@6d00a15d]" name="f" duration-ms="158" started-at="2018-12-05T15:58:45Z" data-provider="datas" finished-at="2018-12-05T15:58:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[9]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[{"mobilephone":"","pwd":"123456"}]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[{"status":"0","code":"20103",data:null,"msg":"手机号不能为空"}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="f(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.lemon.api.auto.testCase.AllTestCase@6d00a15d]" name="f" duration-ms="161" started-at="2018-12-05T15:58:45Z" data-provider="datas" finished-at="2018-12-05T15:58:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[{"mobilephone":"13517315569","pwd":"123456"}]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[{"status":"0","code":"20111",data:null,"msg":"用户名或者密码错误"}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method status="PASS" signature="f(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.lemon.api.auto.testCase.AllTestCase@6d00a15d]" name="f" duration-ms="170" started-at="2018-12-05T15:58:45Z" data-provider="datas" finished-at="2018-12-05T15:58:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[{"mobilephone":"13517315669","pwd":"1234567"}]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[{"status":"0","code":"20111",data:null,"msg":"用户名或者密码错误"}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+      </class> <!-- com.lemon.api.auto.testCase.AllTestCase -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

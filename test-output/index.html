@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-Default_suite">
+              <span class="suite-name border-passed">Default suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
+                    <span>testng-customsuite.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-Default_suite">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-Default_suite">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-Default_suite">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-Default_suite">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Default_suite">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-Default_suite">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">11 methods,   11 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Default_suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.lemon.api.auto.testCase.AllTestCase" hash-for-method="f(1, 1, {&quot;mobilephone&quot;:&quot;13517315669&quot;,&quot;pwd&quot;:&quot;123456&quot;,&quot;regname&quot;:&quot;柠檬班&quot;}, {&quot;status&quot;:1,&quot;code&quot;:&quot;20110&quot;,&quot;data...)">f(1, 1, {"mobilephone":"13517315669","pwd":"123456","regname":"柠檬班"}, {"status":1,"code":"20110","data...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.lemon.api.auto.testCase.AllTestCase" hash-for-method="f(4, 1, {&quot;mobilephone&quot;:&quot;&quot;,&quot;pwd&quot;:&quot;&quot;,&quot;regname&quot;:&quot;柠檬班&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20103&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;手机号...)">f(4, 1, {"mobilephone":"","pwd":"","regname":"柠檬班"}, {"status":0,"code":"20103","data":null,"msg":"手机号...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.lemon.api.auto.testCase.AllTestCase" hash-for-method="f(7, 2, {&quot;mobilephone&quot;:&quot;13517315669&quot;,&quot;pwd&quot;:&quot;123456&quot;}, {&quot;status&quot;:&quot;1&quot;,&quot;code&quot;:&quot;10001&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;...)">f(7, 2, {"mobilephone":"13517315669","pwd":"123456"}, {"status":"1","code":"10001","data":null,"msg":"...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.lemon.api.auto.testCase.AllTestCase" hash-for-method="f(3, 1, {&quot;mobilephone&quot;:&quot;13517315669&quot;,&quot;pwd&quot;:&quot;&quot;,&quot;regname&quot;:&quot;柠檬班&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20103&quot;,&quot;data&quot;:null...)">f(3, 1, {"mobilephone":"13517315669","pwd":"","regname":"柠檬班"}, {"status":0,"code":"20103","data":null...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.lemon.api.auto.testCase.AllTestCase" hash-for-method="f(8, 2, {&quot;mobilephone&quot;:&quot;13517315669&quot;,&quot;pwd&quot;:&quot;&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20103&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;密码不能为空&quot;})">f(8, 2, {"mobilephone":"13517315669","pwd":""}, {"status":0,"code":"20103","data":null,"msg":"密码不能为空"})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.lemon.api.auto.testCase.AllTestCase" hash-for-method="f(10, 2, {&quot;mobilephone&quot;:&quot;13517315569&quot;,&quot;pwd&quot;:&quot;123456&quot;}, {&quot;status&quot;:&quot;0&quot;,&quot;code&quot;:&quot;20111&quot;,data:null,&quot;msg&quot;:&quot;用...)">f(10, 2, {"mobilephone":"13517315569","pwd":"123456"}, {"status":"0","code":"20111",data:null,"msg":"用...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.lemon.api.auto.testCase.AllTestCase" hash-for-method="f(5, 1, {&quot;mobilephone&quot;:&quot;135&quot;,&quot;pwd&quot;:&quot;123456&quot;,&quot;regname&quot;:&quot;柠檬班&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20109&quot;,&quot;data&quot;:null,&quot;...)">f(5, 1, {"mobilephone":"135","pwd":"123456","regname":"柠檬班"}, {"status":0,"code":"20109","data":null,"...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.lemon.api.auto.testCase.AllTestCase" hash-for-method="f(9, 2, {&quot;mobilephone&quot;:&quot;&quot;,&quot;pwd&quot;:&quot;123456&quot;}, {&quot;status&quot;:&quot;0&quot;,&quot;code&quot;:&quot;20103&quot;,data:null,&quot;msg&quot;:&quot;手机号不能为空&quot;})">f(9, 2, {"mobilephone":"","pwd":"123456"}, {"status":"0","code":"20103",data:null,"msg":"手机号不能为空"})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.lemon.api.auto.testCase.AllTestCase" hash-for-method="f(11, 2, {&quot;mobilephone&quot;:&quot;13517315669&quot;,&quot;pwd&quot;:&quot;1234567&quot;}, {&quot;status&quot;:&quot;0&quot;,&quot;code&quot;:&quot;20111&quot;,data:null,&quot;msg&quot;:&quot;...)">f(11, 2, {"mobilephone":"13517315669","pwd":"1234567"}, {"status":"0","code":"20111",data:null,"msg":"...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.lemon.api.auto.testCase.AllTestCase" hash-for-method="f(2, 1, {&quot;mobilephone&quot;:&quot;13517315669&quot;,&quot;pwd&quot;:&quot;123456&quot;,&quot;regname&quot;:&quot;柠檬班&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20110&quot;,&quot;data...)">f(2, 1, {"mobilephone":"13517315669","pwd":"123456","regname":"柠檬班"}, {"status":0,"code":"20110","data...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.lemon.api.auto.testCase.AllTestCase" hash-for-method="f(6, 1, {&quot;mobilephone&quot;:&quot;13517315669&quot;,&quot;pwd&quot;:&quot;123&quot;,&quot;regname&quot;:&quot;柠檬班&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20108&quot;,&quot;data&quot;:n...)">f(6, 1, {"mobilephone":"13517315669","pwd":"123","regname":"柠檬班"}, {"status":0,"code":"20108","data":n...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Default_suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Default_suite" class="panel Default_suite">
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.lemon.api.auto.testCase.AllTestCase</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="f(1, 1, {&quot;mobilephone&quot;:&quot;13517315669&quot;,&quot;pwd&quot;:&quot;123456&quot;,&quot;regname&quot;:&quot;柠檬班&quot;}, {&quot;status&quot;:1,&quot;code&quot;:&quot;20110&quot;,&quot;data...)">
+                  </a> <!-- f(1, 1, {"mobilephone":"13517315669","pwd":"123456","regname":"柠檬班"}, {"status":1,"code":"20110","data...) -->
+                  <span class="method-name">f</span>
+                  <span class="parameters">(1, 1, {"mobilephone":"13517315669","pwd":"123456","regname":"柠檬班"}, {"status":1,"code":"20110","data":null,"msg":"注册成功"})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="f(4, 1, {&quot;mobilephone&quot;:&quot;&quot;,&quot;pwd&quot;:&quot;&quot;,&quot;regname&quot;:&quot;柠檬班&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20103&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;手机号...)">
+                  </a> <!-- f(4, 1, {"mobilephone":"","pwd":"","regname":"柠檬班"}, {"status":0,"code":"20103","data":null,"msg":"手机号...) -->
+                  <span class="method-name">f</span>
+                  <span class="parameters">(4, 1, {"mobilephone":"","pwd":"","regname":"柠檬班"}, {"status":0,"code":"20103","data":null,"msg":"手机号不能为空"})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="f(7, 2, {&quot;mobilephone&quot;:&quot;13517315669&quot;,&quot;pwd&quot;:&quot;123456&quot;}, {&quot;status&quot;:&quot;1&quot;,&quot;code&quot;:&quot;10001&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;...)">
+                  </a> <!-- f(7, 2, {"mobilephone":"13517315669","pwd":"123456"}, {"status":"1","code":"10001","data":null,"msg":"...) -->
+                  <span class="method-name">f</span>
+                  <span class="parameters">(7, 2, {"mobilephone":"13517315669","pwd":"123456"}, {"status":"1","code":"10001","data":null,"msg":"登录成功"})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="f(3, 1, {&quot;mobilephone&quot;:&quot;13517315669&quot;,&quot;pwd&quot;:&quot;&quot;,&quot;regname&quot;:&quot;柠檬班&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20103&quot;,&quot;data&quot;:null...)">
+                  </a> <!-- f(3, 1, {"mobilephone":"13517315669","pwd":"","regname":"柠檬班"}, {"status":0,"code":"20103","data":null...) -->
+                  <span class="method-name">f</span>
+                  <span class="parameters">(3, 1, {"mobilephone":"13517315669","pwd":"","regname":"柠檬班"}, {"status":0,"code":"20103","data":null,"msg":"密码不能为空"})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="f(8, 2, {&quot;mobilephone&quot;:&quot;13517315669&quot;,&quot;pwd&quot;:&quot;&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20103&quot;,&quot;data&quot;:null,&quot;msg&quot;:&quot;密码不能为空&quot;})">
+                  </a> <!-- f(8, 2, {"mobilephone":"13517315669","pwd":""}, {"status":0,"code":"20103","data":null,"msg":"密码不能为空"}) -->
+                  <span class="method-name">f</span>
+                  <span class="parameters">(8, 2, {"mobilephone":"13517315669","pwd":""}, {"status":0,"code":"20103","data":null,"msg":"密码不能为空"})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="f(10, 2, {&quot;mobilephone&quot;:&quot;13517315569&quot;,&quot;pwd&quot;:&quot;123456&quot;}, {&quot;status&quot;:&quot;0&quot;,&quot;code&quot;:&quot;20111&quot;,data:null,&quot;msg&quot;:&quot;用...)">
+                  </a> <!-- f(10, 2, {"mobilephone":"13517315569","pwd":"123456"}, {"status":"0","code":"20111",data:null,"msg":"用...) -->
+                  <span class="method-name">f</span>
+                  <span class="parameters">(10, 2, {"mobilephone":"13517315569","pwd":"123456"}, {"status":"0","code":"20111",data:null,"msg":"用户名或者密码错误"})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="f(5, 1, {&quot;mobilephone&quot;:&quot;135&quot;,&quot;pwd&quot;:&quot;123456&quot;,&quot;regname&quot;:&quot;柠檬班&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20109&quot;,&quot;data&quot;:null,&quot;...)">
+                  </a> <!-- f(5, 1, {"mobilephone":"135","pwd":"123456","regname":"柠檬班"}, {"status":0,"code":"20109","data":null,"...) -->
+                  <span class="method-name">f</span>
+                  <span class="parameters">(5, 1, {"mobilephone":"135","pwd":"123456","regname":"柠檬班"}, {"status":0,"code":"20109","data":null,"msg":"手机号码格式不正确"})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="f(9, 2, {&quot;mobilephone&quot;:&quot;&quot;,&quot;pwd&quot;:&quot;123456&quot;}, {&quot;status&quot;:&quot;0&quot;,&quot;code&quot;:&quot;20103&quot;,data:null,&quot;msg&quot;:&quot;手机号不能为空&quot;})">
+                  </a> <!-- f(9, 2, {"mobilephone":"","pwd":"123456"}, {"status":"0","code":"20103",data:null,"msg":"手机号不能为空"}) -->
+                  <span class="method-name">f</span>
+                  <span class="parameters">(9, 2, {"mobilephone":"","pwd":"123456"}, {"status":"0","code":"20103",data:null,"msg":"手机号不能为空"})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="f(11, 2, {&quot;mobilephone&quot;:&quot;13517315669&quot;,&quot;pwd&quot;:&quot;1234567&quot;}, {&quot;status&quot;:&quot;0&quot;,&quot;code&quot;:&quot;20111&quot;,data:null,&quot;msg&quot;:&quot;...)">
+                  </a> <!-- f(11, 2, {"mobilephone":"13517315669","pwd":"1234567"}, {"status":"0","code":"20111",data:null,"msg":"...) -->
+                  <span class="method-name">f</span>
+                  <span class="parameters">(11, 2, {"mobilephone":"13517315669","pwd":"1234567"}, {"status":"0","code":"20111",data:null,"msg":"用户名或者密码错误"})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="f(2, 1, {&quot;mobilephone&quot;:&quot;13517315669&quot;,&quot;pwd&quot;:&quot;123456&quot;,&quot;regname&quot;:&quot;柠檬班&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20110&quot;,&quot;data...)">
+                  </a> <!-- f(2, 1, {"mobilephone":"13517315669","pwd":"123456","regname":"柠檬班"}, {"status":0,"code":"20110","data...) -->
+                  <span class="method-name">f</span>
+                  <span class="parameters">(2, 1, {"mobilephone":"13517315669","pwd":"123456","regname":"柠檬班"}, {"status":0,"code":"20110","data":null,"msg":"手机号码已被注册"})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="f(6, 1, {&quot;mobilephone&quot;:&quot;13517315669&quot;,&quot;pwd&quot;:&quot;123&quot;,&quot;regname&quot;:&quot;柠檬班&quot;}, {&quot;status&quot;:0,&quot;code&quot;:&quot;20108&quot;,&quot;data&quot;:n...)">
+                  </a> <!-- f(6, 1, {"mobilephone":"13517315669","pwd":"123","regname":"柠檬班"}, {"status":0,"code":"20108","data":n...) -->
+                  <span class="method-name">f</span>
+                  <span class="parameters">(6, 1, {"mobilephone":"13517315669","pwd":"123","regname":"柠檬班"}, {"status":0,"code":"20108","data":null,"msg":"密码长度必须为6~18"})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-passed -->
+        </div> <!-- panel Default_suite -->
+        <div panel-name="test-xml-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">/private/var/folders/70/s998bknx7wz767v37cwq7gbm0000gn/T/testng-eclipse-375398768/testng-customsuite.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;Default suite&quot;&gt;
+  &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.lemon.api.auto.testCase.AllTestCase&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Default test --&gt;
+&lt;/suite&gt; &lt;!-- Default suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Default test (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Default_suite');
+function tableData_Default_suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(11);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'f')
+data.setCell(0, 2, 'com.lemon.api.auto.testCase.AllTestCase')
+data.setCell(0, 3, 1155);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'f')
+data.setCell(1, 2, 'com.lemon.api.auto.testCase.AllTestCase')
+data.setCell(1, 3, 251);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'f')
+data.setCell(2, 2, 'com.lemon.api.auto.testCase.AllTestCase')
+data.setCell(2, 3, 248);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'f')
+data.setCell(3, 2, 'com.lemon.api.auto.testCase.AllTestCase')
+data.setCell(3, 3, 170);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'f')
+data.setCell(4, 2, 'com.lemon.api.auto.testCase.AllTestCase')
+data.setCell(4, 3, 161);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'f')
+data.setCell(5, 2, 'com.lemon.api.auto.testCase.AllTestCase')
+data.setCell(5, 3, 158);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'f')
+data.setCell(6, 2, 'com.lemon.api.auto.testCase.AllTestCase')
+data.setCell(6, 3, 151);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'f')
+data.setCell(7, 2, 'com.lemon.api.auto.testCase.AllTestCase')
+data.setCell(7, 3, 149);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'f')
+data.setCell(8, 2, 'com.lemon.api.auto.testCase.AllTestCase')
+data.setCell(8, 3, 142);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'f')
+data.setCell(9, 2, 'com.lemon.api.auto.testCase.AllTestCase')
+data.setCell(9, 3, 138);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'f')
+data.setCell(10, 2, 'com.lemon.api.auto.testCase.AllTestCase')
+data.setCell(10, 3, 136);
+window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 2 seconds</span>
+              <div id="times-div-Default_suite">
+              </div> <!-- times-div-Default_suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.lemon.api.auto.testCase.AllTestCase</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">f(1, 1, {"mobilephone":"13517315669","pwd":"123456","regname":"柠檬班"}, {"status":1,"code":"20110","data...)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">f(2, 1, {"mobilephone":"13517315669","pwd":"123456","regname":"柠檬班"}, {"status":0,"code":"20110","data...)</span>
+                <span class="method-start">1158 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">f(3, 1, {"mobilephone":"13517315669","pwd":"","regname":"柠檬班"}, {"status":0,"code":"20103","data":null...)</span>
+                <span class="method-start">1407 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">f(4, 1, {"mobilephone":"","pwd":"","regname":"柠檬班"}, {"status":0,"code":"20103","data":null,"msg":"手机号...)</span>
+                <span class="method-start">1660 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">f(5, 1, {"mobilephone":"135","pwd":"123456","regname":"柠檬班"}, {"status":0,"code":"20109","data":null,"...)</span>
+                <span class="method-start">1810 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">f(6, 1, {"mobilephone":"13517315669","pwd":"123","regname":"柠檬班"}, {"status":0,"code":"20108","data":n...)</span>
+                <span class="method-start">1954 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">f(7, 2, {"mobilephone":"13517315669","pwd":"123456"}, {"status":"1","code":"10001","data":null,"msg":"...)</span>
+                <span class="method-start">2107 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">f(8, 2, {"mobilephone":"13517315669","pwd":""}, {"status":0,"code":"20103","data":null,"msg":"密码不能为空"})</span>
+                <span class="method-start">2247 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">f(9, 2, {"mobilephone":"","pwd":"123456"}, {"status":"0","code":"20103",data:null,"msg":"手机号不能为空"})</span>
+                <span class="method-start">2384 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">f(10, 2, {"mobilephone":"13517315569","pwd":"123456"}, {"status":"0","code":"20111",data:null,"msg":"用...)</span>
+                <span class="method-start">2549 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">f(11, 2, {"mobilephone":"13517315669","pwd":"1234567"}, {"status":"0","code":"20111",data:null,"msg":"...)</span>
+                <span class="method-start">2711 ms</span>
+              </div> <!-- test-method -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>
