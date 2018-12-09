@@ -12,6 +12,7 @@ import java.util.List;
 
 import javax.swing.text.StyledEditorKit.ForegroundAction;
 
+import org.apache.commons.collections4.map.StaticBucketMap;
 import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Cell;
@@ -24,9 +25,34 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 import com.lemon.api.auto.pojo.ApiInfo;
 import com.lemon.api.auto.pojo.Apidetail;
+import com.lemon.api.auto.pojo.CellData;
 import com.lemon.api.auto.pojo.ExcelObject;
 
 public class ExcelUtils {
+	/**
+	 * 要写的cell数据池
+	 */
+	
+	private static List<CellData> cellDataToWriteList = new ArrayList<>();
+	/**
+	 * 添加要回写的数据
+	 * @param cellData
+	 */
+	public static void addCellData(CellData cellData) {
+		cellDataToWriteList.add(cellData);
+	}
+	/**
+	 * 获得所有要写的cellData数据
+	 */
+	
+	public static List<CellData> getCellDataToWriteList(){
+		return cellDataToWriteList;
+	}
+	
+	
+	
+	
+	
 	/**
 	 * 将所有的测试用例写在一个excel中,读取该测试用例
 	 * @param excelPath
@@ -241,7 +267,7 @@ public class ExcelUtils {
  * @param result 结果
  * 
  */
-
+    @Deprecated
 	public static void writexcel(String excelPath, int sheetNum, String caseId, int cellNum, String result) {
 		InputStream inp = null;
 		Workbook workbook =null;
@@ -256,6 +282,20 @@ public class ExcelUtils {
 			Sheet sheet = workbook.getSheetAt(sheetNum-1);
 			//获得最大的行号
 			int lastRowNum =sheet.getLastRowNum();
+			
+			//第二种方式
+			//先得到行号
+			int rowNum = ApiUtils.getRowNumByCaseId(caseId);
+			//得到对应的行
+			Row row = sheet.getRow(rowNum -1);
+			//拿到要写数据的列
+			Cell cellToWrite=row.getCell(cellNum-1, MissingCellPolicy.CREATE_NULL_AS_BLANK);
+			cellToWrite.setCellType(CellType.STRING);
+			cellToWrite.setCellValue(result);
+			
+			
+			
+/*			//第一种方式：遍历每一行
 			for (int i = 1;i<=lastRowNum;i++) {
 				//拿到当前行
 				Row row=sheet.getRow(i);
@@ -270,13 +310,13 @@ public class ExcelUtils {
 				Cell cellToWrite=row.getCell(cellNum-1, MissingCellPolicy.CREATE_NULL_AS_BLANK);
 				cellToWrite.setCellType(CellType.STRING);
 				cellToWrite.setCellValue(result);
-				//已经匹配上了，就跳出循环
+				//已经匹配上了，就跳出循环 
 				break;
 				
 				
 			}
 				
-			}
+			}*/
 			
 			outputstream = new FileOutputStream(new File(excelPath));
 			workbook.write(outputstream);
@@ -310,5 +350,102 @@ public class ExcelUtils {
 		}
 		
 	}
+
+
+
+
+
+   public static void batchWrite(String excelPath, int sheetNum) {
+	   InputStream inp = null;
+		Workbook workbook =null;
+		OutputStream outputstream = null;
+		
+		try {
+			//创建一个工作簿对象
+//			inp = ExcelUtils.class.getResourceAsStream(excelPath);
+			inp = new FileInputStream(new File(excelPath));
+			 workbook = WorkbookFactory.create(inp);
+			//获得对应编号的sheet
+			Sheet sheet = workbook.getSheetAt(sheetNum-1);
+			//获得最大的行号
+			int lastRowNum =sheet.getLastRowNum();
+			
+			
+			//拿出所有要回写的数据
+			List<CellData> cellDataToWriteList = ExcelUtils.getCellDataToWriteList();
+			for (CellData cellData : cellDataToWriteList) {
+				//第二种方式
+				//先得到行号
+				int rowNum = ApiUtils.getRowNumByCaseId(cellData.getCaseId());
+				//得到对应的行
+				Row row = sheet.getRow(rowNum -1);
+				//拿到要写数据的列
+				Cell cellToWrite=row.getCell(cellData.getCellNum(), MissingCellPolicy.CREATE_NULL_AS_BLANK);
+				cellToWrite.setCellType(CellType.STRING);
+				cellToWrite.setCellValue(cellData.getResult());
+				
+				
+				
+				
+			}
+			
+			
+			
+/*			//第一种方式：遍历每一行
+			for (int i = 1;i<=lastRowNum;i++) {
+				//拿到当前行
+				Row row=sheet.getRow(i);
+				//拿到当前行的第一列
+				Cell cell =row.getCell(0, MissingCellPolicy.CREATE_NULL_AS_BLANK);
+				cell.setCellType(CellType.STRING);
+				//获得当前列的数据
+				String firstCellValue= cell.getStringCellValue();
+				//判断第一列的数据是不是caseId
+				//如果caseID等于第一列数据
+			if(caseId.equals(firstCellValue)) {
+				Cell cellToWrite=row.getCell(cellNum-1, MissingCellPolicy.CREATE_NULL_AS_BLANK);
+				cellToWrite.setCellType(CellType.STRING);
+				cellToWrite.setCellValue(result);
+				//已经匹配上了，就跳出循环 
+				break;
+				
+				
+			}
+				
+			}*/
+			
+			outputstream = new FileOutputStream(new File(excelPath));
+			workbook.write(outputstream);
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			if (outputstream!=null) {
+				try {
+					outputstream.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			} 
+			if (workbook!=null) {
+				try {
+					workbook.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+				if (inp!=null) {
+					try {
+						inp.close();
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+					
+				}
+			} 
+		}
+		
+	
+}
 
 }

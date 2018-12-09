@@ -7,7 +7,9 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.alibaba.fastjson.JSONObject;
+import com.lemon.api.auto.base.BaseTester;
 import com.lemon.api.auto.pojo.Apidetail;
+import com.lemon.api.auto.pojo.CellData;
 import com.lemon.api.auto.pojo.ExcelObject;
 import com.lemon.api.auto.utils.HttpUtils;
 import com.lemon.api.auto.utils.ApiUtils;
@@ -15,7 +17,7 @@ import com.lemon.api.auto.utils.ExcelUtils;
 
 
 
-public class AllTestCase {
+public class AllTestCase extends BaseTester{
 
 	@DataProvider
 	public Object[][] datas() {
@@ -41,11 +43,12 @@ public class AllTestCase {
 		Map<String, String> paramsMap = (Map<String, String>) JSONObject.parse(requestData);
 		// 3、发包
 		String result = HttpUtils.request(apiId, url, paramsMap);
-		System.out.println(result);
+//		System.out.println(result);
 		//4、断言
 		//还不如保存起来---》将result写会到api_test_case_01.xlsx的第2个sheet的某一行的某一行
-		ExcelUtils.writexcel("target/classes/api_test_case_01.xlsx",2,CaseId,6,result);
-		
+//		ExcelUtils.writexcel("target/classes/api_test_case_01.xlsx",2,CaseId,6,result);
+		//要写的数据的收集，要先准备个容器
+		ExcelUtils.addCellData(new CellData(CaseId, 6, result));
 		System.out.println(result);
 
 	}
